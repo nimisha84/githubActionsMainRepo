@@ -1,0 +1,8 @@
+name: pr-check
+on: push
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pr-check
+        run: echo "Dummy pr check success"
