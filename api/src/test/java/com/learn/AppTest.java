@@ -1,38 +1,24 @@
 package com.learn;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class AppTest {
+    @DisplayName("Dummy Test")
+    @Test
+    void dummyTest() {
+        assertEquals("HI", "HI");
     }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @DisplayName("Another Dummy Test")
+    @Test
+    void anotherDummyTest() {
+        assertEquals("HI", "HI");
     }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @DisplayName("Yet Another Dummy Test")
+    @Test
+    void YetAnotherDummyTest() {
+        assertEquals("HI", "HI");
     }
 }
