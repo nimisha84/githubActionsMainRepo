@@ -1,0 +1,28 @@
+{
+  "name": "cypress-cucumber-typescript-example",
+  "version": "1.0.0",
+  "description": "Example of how to use Cypress with Cucumber and TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run && node cucumber-html-report.js"
+  },
+  "author": "Lukasz Gandecki",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "typescript": "^4.4.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^3.4.0"
+  }
+}
