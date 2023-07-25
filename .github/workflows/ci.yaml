@@ -43,3 +43,9 @@ jobs:
 
       - name: Run ui cucumber tests
         run: cd ui/e2e && npm install && npm run test
+
+      - name: HTML Preview
+        id: html_preview
+        uses: pavi2410/html-preview-action@v2
+        with:
+            html_file: 'ui/e2e/reports/cucumber-html/index.html'
