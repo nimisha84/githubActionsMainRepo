@@ -27,7 +27,7 @@ jobs:
           distribution: 'temurin'
           java-version: '18'
 
-      - name: Run tests
+      - name: Run api tests
         run: cd api && mvn test
 
       - name: Publish Test Report
@@ -35,3 +35,11 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         with:
           report_paths: 'api/target/surefire-reports/TEST-*.xml'
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          
+      - name: Run ui cucumber tests
+        run: cd e2e && npm run test
