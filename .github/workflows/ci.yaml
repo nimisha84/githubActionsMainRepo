@@ -40,6 +40,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          
+
       - name: Run ui cucumber tests
-        run: cd e2e && npm run test
+        run: cd ui/e2e && npm install && npm run test
